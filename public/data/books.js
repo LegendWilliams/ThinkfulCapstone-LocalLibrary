@@ -7034,3 +7034,5 @@ const books = [
     ],
   },
 ];
+
+export.module books
