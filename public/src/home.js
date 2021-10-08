@@ -41,13 +41,18 @@ function getTotalBooksCount(books = []) {
        return ({name : genre});
     });
     
-    // groupedByCount variable is declared as a const variable. within this variable the reduce method is being used on the booksGenre variable we just created.
+    // groupedByCount variable is declared as a const variable. within this variable the reduce method is being used on the booksGenre variable we just created. reduce method is being used as a accumulator alternative.
     const groupedByCount = booksGenres.reduce((arr, bookGenre) => {
       if(!arr[bookGenre.name])
          arr[bookGenre.name] = 1
      else
        arr[bookGenre.name] += 1
        return arr;
+//if the current array in the loop does not have a genre name set it equal to 1, if it does add 1
+// groupedByCount returns an array. 
+// Im not completly sure if the above comment is correct, the arr[bookGenre.name] is throwing me off. In my mind is should only be !arr[name] I guess it's just something about the reduce method I'm not understanding.
+
+
    },{})
 
    let topGenres = [];
